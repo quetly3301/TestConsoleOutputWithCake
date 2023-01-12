@@ -7,6 +7,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Build", "build\Build.csproj", "{5533F28F-54A3-49D5-B651-2119473EE50E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{718EF037-E55A-4A91-9512-77006113D516}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3D0B2D2F-C10D-474C-B269-A6F02D8E4EAC}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{911B30C3-7E7C-4E33-A8E9-0133411ED08B}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		build.sh = build.sh
+		.gitignore = .gitignore
+		.gitattributes = .gitattributes
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,5 +42,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1636B86A-0DA5-4814-A64E-A4DCAF940E21}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D0B2D2F-C10D-474C-B269-A6F02D8E4EAC} = {718EF037-E55A-4A91-9512-77006113D516}
 	EndGlobalSection
 EndGlobal

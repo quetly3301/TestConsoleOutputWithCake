@@ -1,0 +1,31 @@
+name: Run Cake build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    name: Run Cake build
+
+    env:
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+
+    steps:
+      - name: Fetch Sources
+        uses: actions/checkout@v3
+
+      - name: Setup .NET 6.0 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Run powershell script
+        shell: powershell
+        run: |
+          ./build.ps1
